@@ -27,11 +27,11 @@ This project involves the development of a single-threaded, object-oriented elev
 ### Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Svamsi22/advanced-elevator-control-system.git
+    git clone https://github.com/Svamsi22/Advanced-Elevator-Control-System.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd advanced-elevator-control-system
+    cd Advanced-Elevator-Control-System
     ```
 
 ### Usage

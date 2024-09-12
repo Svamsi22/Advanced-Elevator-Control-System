@@ -1,24 +1,13 @@
-import java.util.Scanner;
+import java.util.*;
 
+// Main class to simulate the elevator system
 public class ElevatorChallenge {
-    static void automaticElevator() throws InterruptedException {
-    Elevator elevator = new Elevator();
-    elevator.lunchtimeElevatorRush();
-    elevator.start();
-}
-static void manualElevator() throws InterruptedException {
-    Elevator elevator = new Elevator();
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Enter a starting floor 0 - 10");
-    int start = sc.nextInt();
-    System.out.println("Enter a destination floor 0 - 10");
-    int end = sc.nextInt();
-    elevator.callElevator(start, end);//calling the elevator to pick us up
-    elevator.start();
-}
+    public static void main(String[] args) throws InterruptedException {
+        ElevatorManager manager = new ElevatorManager(3);  // 3 elevators in the system
+        manager.assignRequest(0, 5, 1);  // Call elevator from floor 0 to 5 with high priority
+        manager.assignRequest(2, 7, 2);
+        manager.assignRequest(1, 3, 3);
 
-public static void main(String[] args) throws InterruptedException {
-//manualElevator();
-automaticElevator();
-}
+        manager.startAllElevators();  // Start all elevators
+    }
 }
